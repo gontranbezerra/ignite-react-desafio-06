@@ -1,1 +1,99 @@
-// TODO
+.banner {
+  // border: 1px solid green;
+  max-width: 1440px;
+  margin: 0 auto;
+
+  display: flex;
+  justify-content: center;
+
+  img {
+    // border: 1px solid yellow;
+    max-width: 100%;
+    max-height: 25rem;
+    object-fit: cover;
+    width: 90rem;
+    height: 25rem;
+  }
+}
+
+.contentContainer {
+  // border: 1px solid green;
+  max-width: 1440px;
+  margin: 0 auto;
+
+  main {
+    // border: 1px solid yellow;
+    max-width: 721px;
+    margin: 5rem auto;
+
+    section {
+      h1 {
+        font-style: normal;
+        font-weight: bold;
+        font-size: 3rem;
+        line-height: 3.625rem;
+      }
+
+      .info {
+        display: flex;
+        margin-top: 1.5rem;
+
+        font-style: normal;
+        font-weight: normal;
+        font-size: 0.875rem;
+        line-height: 1.0625rem;
+        color: var(--gray-200);
+
+        span {
+          display: flex;
+          align-items: center;
+
+          & + span {
+            margin-left: 1.5rem;
+          }
+
+          svg {
+            width: 20px;
+            height: 20px;
+
+            margin-right: 0.5rem;
+          }
+        }
+      }
+
+      .content {
+        margin-top: 4rem;
+
+        h1 {
+          font-style: normal;
+          font-weight: bold;
+          font-size: 2.25rem;
+          line-height: 140%;
+          text-align: justify;
+        }
+
+        div {
+          margin-top: 2.25rem;
+
+          & + h1 {
+            margin-top: 2.25rem;
+          }
+
+          font-style: normal;
+          font-weight: normal;
+          font-size: 1.125rem;
+          line-height: 140%;
+          text-align: justify;
+
+          color: var(--gray-100);
+
+          p {
+            & + p {
+              margin-top: 1.125rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
