@@ -25,8 +25,13 @@
     // border: 1px solid yellow;
     max-width: 721px;
     margin: 5rem auto;
+    padding: 0 1.5rem;
 
     section {
+      & + section {
+        margin-top: 4rem;
+      }
+
       h1 {
         font-style: normal;
         font-weight: bold;
@@ -58,6 +63,16 @@
 
             margin-right: 0.5rem;
           }
+        }
+
+        & + div {
+          margin-top: 1rem;
+
+          font-style: italic;
+          font-weight: normal;
+          font-size: 0.875rem;
+          line-height: 1.063rem;
+          color: var(--gray-200);
         }
       }
 
@@ -93,6 +108,76 @@
             }
           }
         }
+      }
+    }
+  }
+
+  footer {
+    max-width: 721px;
+    margin: 3.75rem auto 5rem;
+    padding: 0 1.5rem;
+    border-top: 1px solid rgba(215, 215, 215, 0.1);
+
+    .navigation {
+      margin-top: 3rem;
+      margin-bottom: 5rem;
+
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+
+      .previousPost,
+      .nextPost {
+        display: flex;
+        flex-direction: column;
+
+        span {
+          font-style: normal;
+          font-weight: normal;
+          font-size: 1.125rem;
+          line-height: 1.375rem;
+          letter-spacing: -0.5px;
+          color: var(--white);
+        }
+
+        a {
+          margin-top: 0.5rem;
+
+          span {
+            font-style: normal;
+            font-weight: 600;
+            font-size: 1rem;
+            line-height: 1.188rem;
+            letter-spacing: -0.5px;
+            color: var(--rose-500);
+          }
+        }
+      }
+
+      .nextPost {
+        align-items: flex-end;
+      }
+    }
+
+    aside {
+      height: 3.625rem;
+      width: 100%;
+      margin-top: 5rem;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      border-radius: 0.25rem;
+      background: var(--white);
+
+      a {
+        font-style: normal;
+        font-weight: 600;
+        font-size: 1.125rem;
+        line-height: 1.375rem;
+
+        color: var(--gray-900);
       }
     }
   }
