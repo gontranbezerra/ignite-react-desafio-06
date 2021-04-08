@@ -227,15 +227,11 @@ export const getStaticProps: GetStaticProps = async context => {
   const { params, preview = false, previewData } = context;
   const { slug } = params;
 
-  console.log('slug: ', slug);
-
   const prismic = getPrismicClient();
 
   const response: PostResponse = await prismic.getByUID('posts', String(slug), {
     ref: previewData?.ref ?? null,
   });
-
-  console.log('response: ', JSON.stringify(response, null, 2));
 
   const previousPost = (
     await prismic.query([Prismic.predicates.at('document.type', 'posts')], {
